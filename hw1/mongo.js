@@ -27,9 +27,14 @@ function createMonster(name,health,lastfought,attacks,stats,db) {
 }
 
 // Write the javascript code that would insert the four attributes into the “monster” collection.
- createMonster(monster1.name, monster1.health, monster1.lastfought, monster1.attacks, monster1.stats, "monsters");
+createMonster(monster1.name, monster1.health, monster1.lastfought, monster1.attacks, monster1.stats, "monsters");
 
 // Write the code that would then console.log all the documents inside the collection.
 console.log(
 	db.monsters.find({})
 )
+
+// Write the command that will find your monster based on it’s name
+function findMonster(name){
+	db.monsters.find({"name": name})
+}
