@@ -4,14 +4,14 @@ db.createCollection(monsters)
 var monster1 = {
 	"name" : "Godzilla",
 	"health" : 100,
-	"lastfought" : "1969",
+	"lastfought" : new Date(1969, 1, 1),
 	"attacks" : ["bite", "stomp", "thrash"],
 	"stats" : {"attack" : 60, "defense": 50}
 }
 var monster2 = {
 	"name" : "Cthulhu",
 	"health" : 100,
-	"lastfought" : "1069",
+	"lastfought" : new Date(1069, 1, 1),
 	"attacks" : ["thrash", "smite", "suffocate"],
 	"stats" : {"attack" : 80, "defense": 70}
 }
