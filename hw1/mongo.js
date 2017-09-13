@@ -16,8 +16,11 @@ var monster2 = {
 	"stats" : {"attack" : 80, "defense": 70}
 }
 
+// Write the javascript code that would insert the four attributes into the “monster” collection.
 function createMonster(name,health,lastfought,attacks,stats,db) {
-	db.db.insert( {
+	MONGO shell>>
+	use db
+	db.monster.insert( {
 			"name" : name,
 			"health" : health,
 			"lastfought" : lastfought,
@@ -46,5 +49,5 @@ function findByAttack(attack){
 
 // Write the command that will find a monster based on their defense stat.
 function findByStat(defense){
-	return db.monsters.find({$eq}{stats.defense})
+	return db.monsters.find({"stats":{"$eq": defense}})
 }
