@@ -35,6 +35,11 @@ console.log(
 )
 
 // Write the command that will find your monster based on it’s name
-function findMonster(name){
+function findByName(name){
 	db.monsters.find({"name": name})
+}
+
+// Write the command that will find a monster based on one of the attacks it has
+function findByAttack(attack){
+	db.monsters.find({"attacks": attack})
 }
