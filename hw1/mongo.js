@@ -1,5 +1,5 @@
 // Create Collection
-db.createCollection("monsters")
+db.createCollection(monsters)
 
 var monster1 = {
 	"name" : "Godzilla",
@@ -16,8 +16,8 @@ var monster2 = {
 	"stats" : {"attack" : 80, "defense": 70}
 }
 
-function createMonster(name,health,lastfought,attacks,stats) {
-	db.database.insert( {
+function createMonster(name,health,lastfought,attacks,stats,db) {
+	db.db.insert( {
 			"name" : name,
 			"health" : health,
 			"lastfought" : lastfought,
@@ -25,3 +25,6 @@ function createMonster(name,health,lastfought,attacks,stats) {
 			"stats" : stats
 	} )
 }
+
+// Write the javascript code that would insert the four attributes into the “monster” collection.
+ createMonster(monster1.name, monster1.health, monster1.lastfought, monster1.attacks, monster1.stats, "monsters");
