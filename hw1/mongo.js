@@ -49,5 +49,5 @@ function findByAttack(attack){
 
 // Write the command that will find a monster based on their defense stat.
 function findByStat(defense){
-	return db.monsters.find({"stats":{"$eq": defense}})
+	return db.monsters.find({"stats.defense": defense})
 }
