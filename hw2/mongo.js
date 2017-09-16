@@ -36,7 +36,10 @@ var question5 = function(db) {
 	db.monsters.find({"stats.attack": {"$gt": 10,"$lt": 20}},{"health": false, "style": false})
 }
 // Write the command to find out how many monsters are in the collection.
-var question6 = function(db) {
+var question6 = function(db) {a
 	db.monsters.find({}).count()
 }
 // Write the command to sort the collection by the monsters level with the highest level at the top and the lowest at the bottom
+var question7 = function(db) {
+	db.monsters.find({}).sort({"Level":-1})
+}
