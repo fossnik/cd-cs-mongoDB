@@ -28,6 +28,9 @@ var question3 = function(db) {
 	db.monsters.find({"attacks": {"$ne": "bite"}})
 }
 // Write the command to find monsters with levels less than 6 but only return the name, level and health attributes
+var question4 = function(db) {
+	db.monsters.find({"Level": {"$lt": 6}},{"name": true, "Level": true, "health": true})
+}
 // Write the command to find all monsters who attack is between 10 and 20 but do not include the monsters health or style
 // Write the command to find out how many monsters are in the collection.
 // Write the command to sort the collection by the monsters level with the highest level at the top and the lowest at the bottom
