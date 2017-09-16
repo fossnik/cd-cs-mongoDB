@@ -16,6 +16,9 @@
 // };
 
 // Write the command that will find all monsters with an attack lower than 10
+var question1 = function(db) {
+	db.monsters.find({"stats.attack":{"$lt": 10}})
+}
 // Write the command that will find all monsters with a level above 5 but below 15 inclusive
 // Write the command to find monsters that do not have the “bite” attack.
 // Write the command to find monsters with levels less than 6 but only return the name, level and health attributes
